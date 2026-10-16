@@ -193,9 +193,42 @@ Testing & Running
 
 ---
 
-What to submit:
-1. GitHub repo link (add all files).
-2. Public Postman documentation link (publish collection).
-3. README.pdf (export or print README.md to PDF) + include the GitHub link and Postman link inside the PDF.
+ADDITIONAL: POSTMAN DOCUMENTATION (published)
 
-Good luck!
+Public Postman documentation for this project:
+https://documenter.getpostman.com/view/59015334/2sBYHSxL8C
+
+---
+
+SUBMISSION CHECKLIST
+
+Files/links to submit
+1. README.pdf — a PDF version of this README containing Sections A–E.
+2. GitHub repo link — https://github.com/emmanuelalike9-lab/express-backend-assignment
+3. Postman Documentation (public) link — https://documenter.getpostman.com/view/59015334/2sBYHSxL8C
+
+Pre-submission checks (do these locally first)
+1. Clone & install
+   - git clone https://github.com/emmanuelalike9-lab/express-backend-assignment.git
+   - cd express-backend-assignment
+   - npm install
+
+2. Start the server
+   - npm start
+   - Server should log: Server listening on port 3000 (or PORT in .env)
+
+3. Verify README content
+   - Ensure Sections A–E are present. They are.
+
+Functional checks
+- Open http://localhost:3000 and verify live time updates every ~2 seconds
+- Test CRUD endpoints (POST, GET, PUT, DELETE) using Postman or curl
+
+How to create README.pdf
+- Option A (GitHub): Open README.md on GitHub → Print (Ctrl+P/Cmd+P) → Save as PDF
+- Option B (local): In VS Code open README.md → File → Print/Save as PDF
+
+Download project as ZIP
+- On the repository page click Code → Download ZIP
+
+If you want me to also generate the README.pdf and attach it here, confirm and I will create a PDF version and add it to the repo as README.pdf (or provide it for download).
