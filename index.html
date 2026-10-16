@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>SSE Live Time Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    #time { font-size: 2rem; color: #333; }
+    #status { color: green; }
+  </style>
+</head>
+<body>
+  <h1>Server-Sent Events – Live Server Time</h1>
+  <div id="status">Connecting...</div>
+  <div id="time">--:--:--</div>
+
+  <script>
+    const statusEl = document.getElementById('status');
+    const timeEl = document.getElementById('time');
+
+    // Connect to SSE endpoint
+    const es = new EventSource('/sse/time');
+
+    es.onopen = () => {
+      statusEl.textContent = 'Connected';
+      statusEl.style.color = 'green';
+    };
+
+    es.onmessage = (event) => {
+      timeEl.textContent = event.data;
+    };
+
+    es.onerror = (err) => {
+      statusEl.textContent = 'Connection error. Will attempt to reconnect...';
+      statusEl.style.color = 'red';
+    };
+  </script>
+</body>
+</html>
