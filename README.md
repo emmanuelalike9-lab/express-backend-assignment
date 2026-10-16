@@ -1,6 +1,6 @@
 # EXPRESS.JS BACKEND ASSIGNMENT
 
-Deadline: 19th October, 2026 (10pm)
+
 
 This repository contains:
 - A simple CRUD app (students) implemented in one server file (server.js).
